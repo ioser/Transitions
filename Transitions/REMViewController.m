@@ -10,8 +10,11 @@
 #import "REMDetailViewController.h"
 
 #define DETAIL_VIEW_CONTROLLER_ID "DetailVC"
+#define SEGUE_B_IDENTIFIER "segueB"
 
 @interface REMViewController ()<REMDetailViewControllerDelegate>
+
+@property (strong, nonatomic) NSString *buttonPressed;
 
 @end
 
@@ -30,14 +33,30 @@
 }
 
 //
+// Overrides
+//
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    REMDetailViewController *detailViewController = segue.destinationViewController;
+    detailViewController.letterToDisplay = self.buttonPressed;
+    detailViewController.delegate = self;
+}
+
+//
 // Custom IBAction methods
 //
 
 - (IBAction)sampleAButtonPressed:(UIButton *)sender {
+    self.buttonPressed = @"A";
     REMDetailViewController *detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@DETAIL_VIEW_CONTROLLER_ID];
-    detailViewController.letterToDisplay = @"A";
+    detailViewController.letterToDisplay = self.buttonPressed;
     detailViewController.delegate = self;
     [self presentViewController:detailViewController animated:YES completion:nil];
+}
+
+- (IBAction)sampleBPressed:(UIButton *)sender {
+    self.buttonPressed = @"B";
+    [self performSegueWithIdentifier:@SEGUE_B_IDENTIFIER sender:self];
 }
 
 //
