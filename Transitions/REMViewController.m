@@ -7,8 +7,11 @@
 //
 
 #import "REMViewController.h"
+#import "REMDetailViewController.h"
 
-@interface REMViewController ()
+#define DETAIL_VIEW_CONTROLLER_ID "DetailVC"
+
+@interface REMViewController ()<REMDetailViewControllerDelegate>
 
 @end
 
@@ -24,6 +27,26 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+//
+// Custom IBAction methods
+//
+
+- (IBAction)sampleAButtonPressed:(UIButton *)sender {
+    REMDetailViewController *detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@DETAIL_VIEW_CONTROLLER_ID];
+    detailViewController.letterToDisplay = @"A";
+    detailViewController.delegate = self;
+    [self presentViewController:detailViewController animated:YES completion:nil];
+}
+
+//
+// <REMDetailViewControllerDelegate> Protocol method implementations
+//
+
+- (void)userDidDismissDetailViewController:(REMDetailViewController *)detailViewController {
+    [self dismissViewControllerAnimated:YES completion:nil];
+    NSLog(@"User dismissed detail view controller with letter '%@'", detailViewController.letterToDisplay);
 }
 
 @end
