@@ -18,6 +18,7 @@
 		9A2A790B16C7803900C6A8FD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A2A790A16C7803900C6A8FD /* Default-568h@2x.png */; };
 		9A2A790E16C7803900C6A8FD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A2A790C16C7803900C6A8FD /* MainStoryboard.storyboard */; };
 		9A2A791116C7803900C6A8FD /* REMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2A791016C7803900C6A8FD /* REMViewController.m */; };
+		9A60E9C716C8BA500014E2FB /* REMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A60E9C616C8BA500014E2FB /* REMDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		9A2A790D16C7803900C6A8FD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		9A2A790F16C7803900C6A8FD /* REMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REMViewController.h; sourceTree = "<group>"; };
 		9A2A791016C7803900C6A8FD /* REMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REMViewController.m; sourceTree = "<group>"; };
+		9A60E9C516C8BA500014E2FB /* REMDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REMDetailViewController.h; sourceTree = "<group>"; };
+		9A60E9C616C8BA500014E2FB /* REMDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				9A2A790F16C7803900C6A8FD /* REMViewController.h */,
 				9A2A791016C7803900C6A8FD /* REMViewController.m */,
 				9A2A78FB16C7803900C6A8FD /* Supporting Files */,
+				9A60E9C516C8BA500014E2FB /* REMDetailViewController.h */,
+				9A60E9C616C8BA500014E2FB /* REMDetailViewController.m */,
 			);
 			path = Transitions;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 				9A2A790116C7803900C6A8FD /* main.m in Sources */,
 				9A2A790516C7803900C6A8FD /* REMAppDelegate.m in Sources */,
 				9A2A791116C7803900C6A8FD /* REMViewController.m in Sources */,
+				9A60E9C716C8BA500014E2FB /* REMDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +305,7 @@
 				9A2A791616C7803900C6A8FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
