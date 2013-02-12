@@ -29,6 +29,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.letterToDisplayLabel.text = self.letterToDisplay;
+    self.letterToDisplayLabel.text = [self.delegate buttonPressedLetter];
 }
 
 - (void)didReceiveMemoryWarning

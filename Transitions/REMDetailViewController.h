@@ -25,4 +25,6 @@
 
 - (void)userDidDismissDetailViewController:(REMDetailViewController *)detailViewController;
 
+- (NSString *)buttonPressedLetter;
+
 @end

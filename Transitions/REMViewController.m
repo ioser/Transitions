@@ -11,6 +11,7 @@
 
 #define DETAIL_VIEW_CONTROLLER_ID "DetailVC"
 #define SEGUE_B_IDENTIFIER "segueB"
+#define SEGUE_C_IDENTIFIER "segueC"
 
 @interface REMViewController ()<REMDetailViewControllerDelegate>
 
@@ -38,6 +39,9 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     REMDetailViewController *detailViewController = segue.destinationViewController;
+    if ([segue.identifier isEqualToString:@SEGUE_C_IDENTIFIER] == YES) {
+        self.buttonPressed = @"C";
+    }
     detailViewController.letterToDisplay = self.buttonPressed;
     detailViewController.delegate = self;
 }
@@ -59,6 +63,10 @@
     [self performSegueWithIdentifier:@SEGUE_B_IDENTIFIER sender:self];
 }
 
+- (IBAction)sampleCPressed:(UIButton *)sender {
+    self.buttonPressed = @"X";
+}
+
 //
 // <REMDetailViewControllerDelegate> Protocol method implementations
 //
@@ -66,6 +74,10 @@
 - (void)userDidDismissDetailViewController:(REMDetailViewController *)detailViewController {
     [self dismissViewControllerAnimated:YES completion:nil];
     NSLog(@"User dismissed detail view controller with letter '%@'", detailViewController.letterToDisplay);
+}
+
+- (NSString *)buttonPressedLetter {
+    return self.buttonPressed;
 }
 
 @end

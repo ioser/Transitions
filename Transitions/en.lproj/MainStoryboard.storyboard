@@ -47,6 +47,10 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="sampleCPressed:" destination="2" eventType="touchUpInside" id="A2u-Aw-bl8"/>
+                                    <segue destination="Ys6-qS-NJJ" kind="modal" identifier="segueC" id="Jpo-P2-Ttv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -118,9 +122,31 @@
             <point key="canvasLocation" x="526" y="98"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="REMDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/REMDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="dismissButtonPressed:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="letterToDisplayLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="REMViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/REMViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="sampleAButtonPressed:" candidateClass="UIButton"/>
+                <relationship kind="action" name="sampleBPressed:" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Jpo-P2-Ttv"/>
+    </inferredMetricsTieBreakers>
 </document>
