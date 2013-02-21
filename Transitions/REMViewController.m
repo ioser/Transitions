@@ -39,6 +39,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     REMDetailViewController *detailViewController = segue.destinationViewController;
+	NSLog(@"Performing segue: '%@'", segue.identifier);
     if ([segue.identifier isEqualToString:@SEGUE_C_IDENTIFIER] == YES) {
         self.buttonPressed = @"C";
     }

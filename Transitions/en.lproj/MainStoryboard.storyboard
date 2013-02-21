@@ -224,7 +224,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cr9-Lf-JRI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1046" y="-142"/>
+            <point key="canvasLocation" x="1166" y="-142"/>
         </scene>
         <!--Navigation Controller - D - F-->
         <scene sceneID="fLo-0y-k8n">
@@ -272,6 +272,7 @@
         <class className="REMDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/REMDetailViewController.h"/>
             <relationships>
+                <relationship kind="action" name="dismissButtonPressed:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="letterToDisplayLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
@@ -286,6 +287,11 @@
         </class>
         <class className="REMViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/REMViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="sampleAButtonPressed:" candidateClass="UIButton"/>
+                <relationship kind="action" name="sampleBPressed:" candidateClass="UIButton"/>
+                <relationship kind="action" name="sampleCPressed:" candidateClass="UIButton"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
